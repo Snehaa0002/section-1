@@ -13,7 +13,7 @@ console.log(newArr);
 const names = ['ravi', 'sneha','mahi', 'muskan','parul'];
 
 console.log('abc', toUpperCase() );
-const upperCaseNames = names.map( (n) =>{return n.toUpperCase() } );
+const upperCaseNames = names.map( (n) => {return n.toUpperCase() } );
 console.log(upperCaseNames);
 
 
