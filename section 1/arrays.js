@@ -1,4 +1,3 @@
-
 const myarr =['xyz','456',6789,true,undefined];
 
 console.log(myarr);
@@ -12,7 +11,7 @@ console.log(movies[3]);
 console.log(movies.indexOf('Deadpool'));
 console.log(movies[50]);
 //movies[50] = 'Flash'
-console.log(movies[50]);function.
+console.log(movies[50]);
 console.log(movies[-1]);
 console.log(movies.at(-2));
 console.log(movies.at(4));
@@ -55,3 +54,10 @@ console.log(movies);
 movies.splice(3,0,'Aquaman');
 console.log(movies);
 
+for( let i=0; i<movies.length;i++){
+    console.log(movies[i]);
+}
+
+for(let mov of movies){
+    console.log(mov);
+}
