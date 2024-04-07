@@ -12,10 +12,10 @@ const smartphoneList =[
   console.log(budgetPhones);
   // filter all samsung phones
 
-   const samsungPhones = smartphoneList .filter (( phone) => { return phone.brand  ==='samsung'} );
-  console.log(samsungphones);
-  const bluePhones = smartphoneList.filter ( ( phone) => { return phone.colors.include ===('blu')} );
-  console.log(bluephones);
+   const samsungPhones = smartphoneList .filter (( phone) => { return phone.brand  === 'samsung'} );
+  console.log(samsungPhones);
+  const bluePhones = smartphoneList.filter ( ( phone) => { return phone.colors.include.blue} );
+  console.log(bluePhones);
 
   // create an array  of phone models
   // create an array  of phone brands
@@ -24,6 +24,4 @@ const smartphoneList =[
    console.log(model);
    const brand = smartphoneList.map( (phone) => { return phone.brand } );
    console.log(new Set(brand));
-
-
 
