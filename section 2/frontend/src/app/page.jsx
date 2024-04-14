@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import{IconLogin} from '@tabler/icons-react';
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
         <hr /><br /><input type="text" />
         
         <button className='mybtn'>My Button</button>
-        <button className='loginbtn'>Lets Check</button>
+        <button className='btn btn-primary'><IconLogin  size ={20} stroke={1}color={'red'}/> Lets Check</button>
+       
     </div>
   )
 }

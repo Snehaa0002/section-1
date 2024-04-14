@@ -8,6 +8,12 @@ const EventHandling = () => {
         <hr />
 
         <button className='btn btn-primary' onClick={ () =>  { alert('Huraayyyyy....!') } }>Click Me!</button>
+
+
+        <input type="color" onChange={ (e) => {
+           console.log(e.target.value);
+           document.body.style.backgroundcolor = e.target.value;
+           } } />
     </div>
   )
 }
