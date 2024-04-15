@@ -18,10 +18,27 @@ const Todo = () => {
 
         
         if(e.code === 'Enter'){
-               console.log(e.log(e.target.value));
+               console.log(e.target.value);
+
+               setTodoList( [ ... todoList, { task : e.target.value, completed: false } ] );
+               e.target.value = '';
          }
 
         
+    }
+
+    const deleteTask = (index) => {
+        console.log(index);
+        const temp = todoList;
+        temp.splice(index, 1);
+        setTodoList([...temp]);
+    }
+
+    const finishTask = (index) => {
+        const temp = todoList;
+        temp[index].completed = !temp[index].completed;
+        console.log(temp );
+        setTodoList([...temp]);
     }
     
   return (
@@ -39,7 +56,22 @@ const Todo = () => {
                      todoList.map( (item,index) => {
                         return <div key={index} className='d-flex justify-content-between p-3'>
                             <p>{item.task}</p>
-                            <button className='btn btn-danger'>Delete</button>
+
+                            { item.completed ?
+                            <span className='badge bg-sucess'>pending</span>
+                            :
+                            <span className='badge bg-warning'>pending</span>
+                     }
+
+
+
+                            <div>
+                              <button onclick={() => { finishTask( index) }} className='btn btn-primary me-3'>
+                                {
+                                   item.completed ? 'undo' : 
+                            
+                              <button onclick={() => { deleteTask( index) }} className='btn btn-danger'>Delete</button>
+                            </div>
                             </div>
                      } )
                 }
